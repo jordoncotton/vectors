@@ -1,5 +1,4 @@
 #pragma once
-#include "Vectors.h"
 #include <iostream>
 
 class Vector2
@@ -15,6 +14,7 @@ public:
 	float GetX();
 	float GetY();
 	float magnitude();
+	float Distance(Vector2& other);
 
 	Vector2 Normalize();
 	Vector2 operator+(Vector2 &rhs);
@@ -23,7 +23,4 @@ public:
 
 	bool operator==(Vector2 &rhs);
 	bool operator!=(Vector2 &rhs);
-
-	
-	
 };

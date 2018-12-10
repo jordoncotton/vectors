@@ -15,7 +15,7 @@ Vector2::Vector2(float x, float y)
 float Vector2::GetX()
 {
 	return 0.0f;
-}
+}	
 
 float Vector2::GetY()
 {
@@ -59,6 +59,12 @@ float Vector2::magnitude()
 {
 	float pat = (xPos * xPos) + (yPos * yPos);
 	return sqrtf(pat);
+}
+
+float Vector2::Distance(Vector2& other)
+{
+	Vector2 a = *this - other;
+	return a.magnitude();
 }
 
 Vector2 Vector2::Normalize()
