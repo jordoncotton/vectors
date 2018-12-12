@@ -1,4 +1,5 @@
 #include "Vectors.h"
+#include <cmath>
 
 Vector2::Vector2()
 {
@@ -57,14 +58,18 @@ bool Vector2::operator!=(Vector2 & rhs)
 
 float Vector2::magnitude()
 {
-	float pat = (xPos * xPos) + (yPos * yPos);
-	return sqrtf(pat);
+	return sqrtf(pow(xPos, 2) + pow(yPos, 2));
 }
 
 float Vector2::Distance(Vector2& other)
 {
 	Vector2 a = *this - other;
 	return a.magnitude();
+}
+
+float Vector2::DotProduct(Vector2& other)
+{
+	return ((xPos + other.xPos) + (yPos + other.yPos));
 }
 
 Vector2 Vector2::Normalize()
