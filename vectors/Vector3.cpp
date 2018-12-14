@@ -25,7 +25,7 @@ float Vector3::GetY()
 
 Vector3 Vector3::operator+(Vector3 & rhs)
 {
-	return Vector3(xPos + rhs.xPos, yPos + rhsk.yPos, zPos + rhs.zPos);
+	return Vector3(xPos + rhs.xPos, yPos + rhs.yPos, zPos + rhs.zPos);
 }
 
 Vector3 Vector3::operator-(Vector3 & rhs)
